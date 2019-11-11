@@ -9,7 +9,7 @@ Allow node modules to install
 
 Run `gulp`
 
-#Project includes:
+# Project includes:
 
 - gulp
 - sass
