@@ -1,0 +1,54 @@
+$button-background: $brand;
+$button-text:       $white;
+$button-radius:     50px;
+
+.button {
+  padding: $spacing-med $spacing-xl;
+  border-radius: $button-radius;
+  display: inline-block;
+  color: $white;
+  background: $button-background;
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+  border: 3px solid $button-background;
+  transition: $transition-time;
+  cursor: pointer;
+  outline: 0;
+
+  @include max-screen(767px) {
+    font-size: $font-size-sm-mob;
+    line-height: $line-height-sm-mob;
+    padding: $spacing-sm $spacing-med;
+    border: 2px solid $white;
+  }
+
+  @include link-hover {
+    background: transparent;
+    border: 3px solid $button-background;
+    color: $brand;
+  }
+
+  &--white {
+    background: $white;
+    color: $button-background;
+    border: 0;
+
+    @include link-hover {
+      border: 0;
+      background: $button-background;
+      color: $white;
+    }
+  }
+
+  &--transparent {
+    background: transparent;
+    color: $button-background;
+
+    @include link-hover {
+      background: $button-background;
+      border: 3px solid $button-background;
+      color: $button-text;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+h1, h2, h3, h4, h5, h6, p {
+  color: $font-color;
+  margin-bottom: $spacing-lg;
+
+  @include max-screen(1024px) {
+    margin-bottom: 16px;
+  }
+}
+
+h1 {
+  font-family: $primary-font;
+  font-size: $font-size-xl;
+  line-height: $line-height-xl;
+  font-weight: $font-weight-semi-bold;
+
+  @include max-screen(768px) {
+    font-size: $font-size-xl-mob;
+    line-height: $line-height-xl-mob;
+  }
+}
+
+h2 {
+  font-family: $primary-font;
+  font-size: $font-size-lg;
+  line-height: $line-height-lg;
+  font-weight: $font-weight-semi-bold;
+  margin-bottom: $spacing-med;
+
+
+  @include max-screen(768px) {
+    font-size: $font-size-lg-mob;
+    line-height: $line-height-lg-mob;
+  }
+}
+
+h3 {
+  font-family: $primary-font;
+  font-size: $font-size-md;
+  line-height: $line-height-md;
+  font-weight: $font-weight-semi-bold;
+
+
+  @include max-screen(768px) {
+    font-size: $font-size-md-mob;
+    line-height: $line-height-md-mob;
+  }
+}
+
+h4, h5, h6 {
+  font-family: $primary-font;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+  font-weight: $font-weight-semi-bold;
+
+  @include max-screen(768px) {
+    font-size: $font-size-sm-mob;
+    line-height: $line-height-sm-mob;
+  }
+}
+
+p {
+  font-family: $primary-font;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+  font-weight: $font-weight-normal;
+
+  @include max-screen(768px) {
+    font-size: $font-size-sm-mob;
+    line-height: $line-height-sm-mob;
+  }
+}
+
+.less-margin {
+  margin-bottom: 16px;
+}
+
+.small {
+  color: #999999;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin-bottom: $spacing-sm;
+}

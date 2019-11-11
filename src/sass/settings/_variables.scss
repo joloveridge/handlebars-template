@@ -1,0 +1,53 @@
+$menu-mobile-breakpoint: 768px;
+
+/* Fonts */
+$base-font-size:    16px;
+$base-line-height:  22px;
+$letter-spacing:    0.5px;
+$font-weight-light:   300;
+$font-weight-normal:  400;
+$font-weight-semi-bold: 600;
+$font-weight-bold:    700;
+
+/* Other */
+
+$base-radius:       8px;
+
+/* Transitions */
+
+$transition-time:   0.3s;
+
+/* Spacing */
+
+$spacing-xxl:       48px;
+$spacing-xl:        32px;
+$spacing-lg:        24px;
+$spacing-med:       16px;
+$spacing-sm:        12px;
+$spacing-xs:        8px;
+
+/* Font Sizes */
+
+$font-size-xs:      0.75rem; // smaller -  12px
+$font-size-sm:      1rem; // paragraph, h4, h5, h6 - 16px
+$font-size-md:      1.75rem; // h3
+$font-size-lg:      2rem; // h2
+$font-size-xl:      2.5rem; // h1
+
+$line-height-xs:    1.5rem; // - 24px
+$line-height-sm:    1.5rem; // paragraph, h4, h5, h6 - 24px
+$line-height-md:    1.625rem; // h3
+$line-height-lg:    2.5rem; // h2
+$line-height-xl:    3rem; // h1
+
+$font-size-xs-mob:  0.75rem; // smaller - 12px
+$font-size-sm-mob:  0.875rem; // paragraph, h4, h5, h6 - 14px
+$font-size-md-mob:  1rem; // h3
+$font-size-lg-mob:  1.25rem; // h2
+$font-size-xl-mob:  1.25rem; // h1
+
+$line-height-xs-mob:    1.25rem;
+$line-height-sm-mob:    1.25rem; // paragraph, h4, h5, h6
+$line-height-md-mob:    1.5rem; // h3
+$line-height-lg-mob:    1.75rem; // h2
+$line-height-xl-mob:    1.75rem; // h1

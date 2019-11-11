@@ -1,0 +1,19 @@
+.center {
+  text-align: center;
+}
+
+.brand-background {
+  background-color: $brand;
+
+  h1, h2, h3, h4, h5, h6, p {
+    color: $white;
+  }
+}
+
+.padding {
+  padding: $spacing-xxl 0;
+}
+
+.flex {
+  display: flex;
+}
