@@ -3,4 +3,8 @@ $footer-background: $dark-blue;
 .footer {
   background: $footer-background;
   width: 100%;
+
+  h2, p {
+    color: $white;
+  }
 }
