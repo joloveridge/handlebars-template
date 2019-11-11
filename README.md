@@ -1,5 +1,6 @@
 # handlebars-template
-A boilerplate for handlebars, using gulp
+A boilerplate for handlebars, using gulp. Project built in collaboration with [Adam Auckland](https://github.com/adamauckland) (to whom I owe many beers)
+
 
 # Initialize project
 
