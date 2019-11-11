@@ -23,4 +23,4 @@ Run `gulp`
 - concat
 - sourcemaps
 
-Running gulp will compile everything from src (sass, js, images, fonts and handlebar templates/partials) into /dist.
+Running gulp will compile everything from /src (sass, js, images, fonts and handlebar templates/partials) into /dist.
