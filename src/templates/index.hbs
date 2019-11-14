@@ -7,6 +7,18 @@
 
             <p>this file is src/templates/index.hbs</p>
 
+            <div>@file.base: {{ @file.base }}</div>
+            <div>templateName helper output: {{ templateName @file }}</div>
+
+            <div>
+                Checking template is called "unknown.hbs": {{ templateIs @file "unknown.hbs" "active" }}
+            </div>
+            <div>
+                Checking template is called "index.hbs": {{ templateIs @file "index.hbs" "active" }}
+
+                This element should have an "active" class on it  <div style="background-color: red" class="{{ templateIs @file "index.hbs" "active" }}">Here</div>
+            </div>
+
             <p>Visit the <a class="button" href="/about.html">About page</a> </p>
         </div>
 

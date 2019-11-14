@@ -16,6 +16,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var clean = require('gulp-clean');
+const hb = require('gulp-hb');
 
 
 // Development Tasks
@@ -50,13 +51,18 @@ gulp.task('sass', function () {
 });
 
 gulp.task('handlebars', function () {
-    let data = JSON.parse(fs.readFileSync('src/data.json'));
-    let options = {
-        ignorePartials: true, // ignores any unknown partials. Useful if you only want to handle part of the file
-        batch : ['src/partials'] // Javascript array of filepaths to use as partials   <--- where your partials go
-    };
     return gulp.src('src/templates/**/*.hbs')
-        .pipe(handlebars(data, options))
+        .pipe(hb()
+            .partials('src/partials/**/*.hbs')
+            .helpers({
+                templateName: function (item) {
+                    return item.path.substring(item.base.length);
+                },
+                templateIs: function (item, templateName, className) {
+                    return item.path.substring(item.base.length) === templateName ? className : "";
+                }
+            })
+        )
         .pipe(rename(function(path) {
             path.extname = '.html';
         }))
