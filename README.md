@@ -15,13 +15,12 @@ Run `gulp`
 - gulp
 - sass
 - browser-sync
-- uglify
-- css-nano
+- minify
 - imagemin
 - handle-bars
 - autoprefixer
 - clean
-- concat
 - sourcemaps
+- gulp-watch
 
-Running gulp will compile everything from /src (sass, js, images, fonts and handlebar templates/partials) into /dist.
+Running gulp will compile everything from /src and /templates (sass, js, images, fonts and handlebar templates/partials) into /dist ready for deployment.
