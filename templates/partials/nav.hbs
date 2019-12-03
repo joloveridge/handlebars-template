@@ -1,0 +1,15 @@
+<nav aria-label="Main Menu">
+    <button class="open-button" aria-expanded="false" aria-haspopup="menu" aria-controls="main-menu" aria-label="Open Main Navigation">
+        <span class="hidden">Open Menu</span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav>
+    <ul class="menu" id="main-menu">
+        {{#each navigation}}
+            <li><a href="{{ link }}" rel="{{ rel }}" {{#eq ../active id}}class="current"{{/eq}}>{{ title }}</a></li>
+        {{/each}}
+        </ul>
+    </nav>
+</nav>
