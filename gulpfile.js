@@ -55,7 +55,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('handlebars', function () {
-    let data = JSON.parse(fs.readFileSync('src/data.json'));
+    let data = JSON.parse(fs.readFileSync('templates/data.json'));
     let options = {
         ignorePartials: true,
         batch : ['templates/partials'], // Where partials go
@@ -92,7 +92,7 @@ gulp.task('watch', function() {
     gulp.watch('src/js/**/*.js', ['pack-js']);
     gulp.watch('src/*.html', browserSync.reload);
     gulp.watch('templates/pages/**/*.hbs', ['handlebars']);
-    gulp.watch('src/data.json', ['handlebars']);
+    gulp.watch('templates/data.json', ['handlebars']);
     gulp.watch('templates/partials/*.hbs', ['handlebars']);
     gulp.watch('src/img/**/*.+(png|jpg|jpeg|gif|svg)', ['images']);
 });
