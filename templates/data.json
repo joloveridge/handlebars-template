@@ -1,0 +1,24 @@
+{
+  "home": {
+    "meta-title": "Handlebars Boilerplate",
+    "meta-description": "This is a default meta description"
+  },
+
+  "about": {
+    "meta-title": "About",
+    "meta-description": "Another meta description"
+  },
+
+  "navigation":[
+    {
+      "id": "home",
+      "title":"Home",
+      "link":"/"
+    },
+    {
+      "id": "about",
+      "title":"About me",
+      "link":"/about"
+    }
+  ]
+}
