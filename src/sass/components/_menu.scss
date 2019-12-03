@@ -1,0 +1,124 @@
+
+$menu-link: $off-black;
+$menu-link-current: $brand;
+$menu-link-hover: $brand;
+
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  float: right;
+
+  @include max-screen($menu-mobile-breakpoint) {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 100;
+    transition: 0.2s;
+    flex-direction: column;
+    padding: 100px 16px 0;
+  }
+
+  &.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  li {
+    margin: 0 20px;
+
+    @include max-screen($menu-mobile-breakpoint) {
+      display: block;
+      margin: 0;
+    }
+
+    a {
+      font-size: 1rem;
+      font-weight: $font-weight-semi-bold;
+      display: block;
+      color: $menu-link;
+      text-decoration: none;
+      position: relative;
+
+      @include max-screen($menu-mobile-breakpoint) {
+        color: $white;
+        display: block;
+        padding: 16px 32px 16px 48px;
+        font-size: 1.5rem;
+      }
+
+      @include link-hover {
+        color: $menu-link-hover;
+        transition: $transition-time;
+
+        &:after {
+          content: "";
+          background: url("../img/menu-dot.svg") no-repeat;
+          background-size: contain;
+          width: 11px;
+          height: 11px;
+          display: block;
+          margin: 6px auto 0;
+          transition: $transition-time;
+          position: absolute;
+          left: 0;
+          right: 0;
+
+          @include max-screen(1024px) {
+            right: auto;
+            left: 16px;
+          }
+        }
+
+        @include max-screen($menu-mobile-breakpoint) {
+          &:after {
+            position: absolute;
+            left: 16px;
+            top: 18px;
+          }
+        }
+      }
+
+      &.current {
+        color: $menu-link-current;
+
+        @include max-screen($menu-mobile-breakpoint) {
+          &:after {
+            position: absolute;
+            left: 16px;
+            top: 18px;
+            right: auto;
+          }
+        }
+
+        &:after {
+          content: "";
+          background: url("../img/menu-dot.svg") no-repeat;
+          background-size: contain;
+          width: 11px;
+          height: 11px;
+          display: block;
+          margin: 6px auto 0;
+          transition: $transition-time;
+          position: absolute;
+          left: 0;
+          right: 0;
+
+          @include max-screen(1024px) {
+            right: auto;
+            left: 16px;
+          }
+        }
+      }
+    }
+  }
+}
